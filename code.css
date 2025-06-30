@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background-color: #a0e7e5; /* Cheerful light blue */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+#app-container {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #f38181; /* Warm pink/red */
+}
+
+.screen {
+    display: none; /* Hide screens by default */
+}
+
+.screen.visible {
+    display: block; /* Show the active screen */
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.menu-btn {
+    font-family: inherit;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.menu-btn:hover {
+    transform: scale(1.05);
+}
+
+.addition { background-color: #95e1d3; } /* Light green */
+.subtraction { background-color: #fce38a; } /* Light yellow */
+
+#game-screen {
+    position: relative;
+}
+
+#back-btn {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    background: #f38181;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#visual-area {
+    background-color: #f0f8ff;
+    min-height: 120px;
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+.item-strikethrough {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+#problem-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #6a5acd; /* Slate blue */
+}
+
+#options-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.option-btn {
+    font-family: inherit;
+    font-size: 2em;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #f0f0f0;
+    transform: translateY(-5px);
+}
+
+#feedback-text {
+    font-size: 1.5em;
+    min-height: 30px;
+    font-weight: bold;
+}
+
+#feedback-text.correct {
+    color: #28a745; /* Green */
+}
+
+#feedback-text.incorrect {
+    color: #dc3545; /* Red */
+}
+
+#next-question-btn {
+    font-family: inherit;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
